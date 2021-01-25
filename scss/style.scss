@@ -513,3 +513,99 @@ introduction
     }
 }
 
+/**************
+blog
+**************/
+.blog {
+  padding: $sectionPadding;
+  background-color: $lightGray;
+  h2 {
+    text-align: center;
+    color: $primary;
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    main {
+      flex: 0 0 70%;
+
+      article {
+        display: flex;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px $secondary;
+        .featured-image {
+          padding: 20px;
+          img {
+            width: 300px;
+            height: 250px;
+          }
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+          color: $secondary;
+          h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+          }
+          h3 {
+            font-size: 1.5rem;
+            color: $primary;
+            margin-bottom: 15px;
+          }
+          button {
+            background: $primary;
+            color: $white;
+            padding: 5px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            border: 0;
+            cursor: pointer;
+            &:hover {
+              transition: $transition;
+              color: $white;
+              background: $secondary;
+              box-shadow: 1px 1px 10px $secondary;
+            }
+          }
+        }
+      }
+    }
+    aside {
+      flex: 0 0 27%;
+      .widget {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px $secondary;
+        padding: 38px;
+
+        h3 {
+          font-size: 1.7rem;
+          color: $primary;
+          margin-bottom: 25px;
+        }
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 11px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            a {
+              color: $secondary;
+              text-decoration: none;
+              &:hover {
+                text-shadow: 2px 2px 5px rgba($secondary, 0.5);
+                transition: $transition;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
