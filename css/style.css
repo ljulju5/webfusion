@@ -435,4 +435,80 @@ introduction
   .principles p {
     font-size: 1.2rem; }
 
+/**************
+blog
+**************/
+.blog {
+  padding: 60px 0;
+  background-color: #f1f1f1; }
+  .blog h2 {
+    text-align: center;
+    color: #ce1b28;
+    margin-bottom: 30px;
+    font-size: 1.9rem; }
+  .blog .container {
+    display: flex;
+    justify-content: space-between; }
+    .blog .container main {
+      flex: 0 0 70%; }
+      .blog .container main article {
+        display: flex;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px #111111; }
+        .blog .container main article .featured-image {
+          padding: 20px; }
+          .blog .container main article .featured-image img {
+            width: 300px;
+            height: 250px; }
+        .blog .container main article .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+          color: #111111; }
+          .blog .container main article .text h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px; }
+          .blog .container main article .text h3 {
+            font-size: 1.5rem;
+            color: #ce1b28;
+            margin-bottom: 15px; }
+          .blog .container main article .text button {
+            background: #ce1b28;
+            color: #fff;
+            padding: 5px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            border: 0;
+            cursor: pointer; }
+            .blog .container main article .text button:hover {
+              transition: 0.3s ease all;
+              color: #fff;
+              background: #111111;
+              box-shadow: 1px 1px 10px #111111; }
+    .blog .container aside {
+      flex: 0 0 27%; }
+      .blog .container aside .widget {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px #111111;
+        padding: 38px; }
+        .blog .container aside .widget h3 {
+          font-size: 1.7rem;
+          color: #ce1b28;
+          margin-bottom: 25px; }
+        .blog .container aside .widget ul {
+          list-style: none; }
+          .blog .container aside .widget ul li {
+            margin-bottom: 11px;
+            font-weight: bold;
+            font-size: 1.2rem; }
+            .blog .container aside .widget ul li a {
+              color: #111111;
+              text-decoration: none; }
+              .blog .container aside .widget ul li a:hover {
+                text-shadow: 2px 2px 5px rgba(17, 17, 17, 0.5);
+                transition: 0.3s ease all; }
+
 /*# sourceMappingURL=style.css.map */
