@@ -48,7 +48,8 @@ header {
     min-height: 100%;
     position: absolute;
     right: 50%;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     header .video::before {
       content: "";
       background: linear-gradient(to right, rgba(206, 27, 40, 0.5), rgba(17, 17, 17, 0.5));

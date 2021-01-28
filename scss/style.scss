@@ -57,7 +57,7 @@ header {
     position: absolute;
     right: 50%;
     width: 100%;
-    // overflow: hidden;
+     overflow: hidden;
     &::before {
       content: "";
       background: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.5));
