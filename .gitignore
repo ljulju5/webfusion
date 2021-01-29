@@ -1,3 +1,9 @@
-/.sass-cache/*
+.sass-cache/*
 
 style.css
+
+css/mixins.css.map
+
+css/style.css.map
+
+css/variable.css.map
