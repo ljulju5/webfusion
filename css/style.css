@@ -48,7 +48,8 @@ header {
     min-height: 100%;
     position: absolute;
     right: 50%;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     header .video::before {
       content: "";
       background: linear-gradient(to right, rgba(206, 27, 40, 0.5), rgba(17, 17, 17, 0.5));
@@ -175,27 +176,50 @@ Menu
           transition: 0.3s ease all; }
 
 /**************
+mission
+**************/
+.mission {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 80px 0; }
+  .mission article {
+    flex: 0 0 30%; }
+    .mission article h3 {
+      padding-bottom: 20px;
+      font-size: 1.5rem; }
+      .mission article h3::after {
+        display: block;
+        content: "";
+        width: 60px;
+        height: 3px;
+        background: #ce1b28;
+        margin: 15px 0; }
+    .mission article p {
+      line-height: 1.5;
+      text-align: justify; }
+
+/**************
 technologies
 **************/
 .technologies {
   background-color: #f1f1f1;
-  padding: 60px 0; }
+  padding: 80px 0; }
   .technologies h2 {
     font-size: 2.2rem;
     color: #111111;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .technologies .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
     .technologies .container article {
-      flex: 0 0 31%;
+      flex: 0 0 30%;
       text-align: center;
-      box-shadow: 1px 1px 5px #111111;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      box-shadow: 1px 1px 5px lightgray;
+      margin: 30px 0;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -208,17 +232,17 @@ technologies
       .technologies .container article h3 {
         color: #111111;
         font-size: 1.3em;
-        margin-top: 15px; }
+        margin-top: 25px; }
       .technologies .container article p {
         color: #111111;
         text-align: justify;
-        padding: 15px; }
+        padding: 25px; }
       .technologies .container article img {
         width: 100%;
         height: auto;
         max-height: 250px; }
       .technologies .container article:hover {
-        box-shadow: 2px 2px 10px #111111;
+        box-shadow: 1px 1px 5px #111111;
         transition: 0.3s ease all; }
 
 /**************
@@ -228,7 +252,7 @@ about
   background: linear-gradient(to right, rgba(206, 27, 40, 0.5), rgba(17, 17, 17, 0.5)), url(../img/background.jpg);
   background-position: center;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,7 +274,7 @@ counter
 .counter {
   background: #f1f1f1;
   position: relative;
-  padding: 60px 0; }
+  padding: 80px 0; }
   .counter .container {
     display: flex;
     justify-content: space-around;
@@ -282,13 +306,13 @@ team
 **************/
 .team {
   background: #f1f1f1;
-  padding: 60px 0; }
+  padding: 80px 0; }
   .team h2 {
     font-size: 2.2rem;
     color: #111111;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .team .container {
     display: flex;
     justify-content: space-between;
@@ -318,8 +342,9 @@ team
       .team .container article small {
         color: #ce1b28; }
       .team .container article p {
-        margin: 30px 0;
-        color: #111111; }
+        color: #111111;
+        padding: 25px;
+        line-height: 1.5; }
       .team .container article:hover {
         box-shadow: 1px 1px 10px #111111;
         transition: 0.3s ease all; }
@@ -437,13 +462,13 @@ Page About us
 introduction
 ***********/
 .introduction {
-  padding: 60px 0; }
+  padding: 80px 0; }
   .introduction h2 {
     font-size: 2.2rem;
     color: #111111;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .introduction .container {
     display: flex;
     flex-direction: row;
@@ -492,7 +517,7 @@ introduction
     color: #111111;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #fff; }
   .principles p {
     font-size: 1.2rem; }
@@ -501,7 +526,7 @@ introduction
 blog
 **************/
 .blog {
-  padding: 60px 0;
+  padding: 80px 0;
   background-color: #f1f1f1; }
   .blog h2 {
     text-align: center;
@@ -579,11 +604,14 @@ PRODUCTS & SERVICES
 .products {
   color: #fff;
   background: #232c33;
-  padding: 50px 0; }
+  padding: 80px 0; }
   .products h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    color: #111111;
+    font-weight: 400;
     text-align: center;
-    margin: 20px 0; }
+    margin-bottom: 50px;
+    color: #fff; }
   .products p {
     font-size: 1.2rem;
     text-align: center; }
@@ -607,10 +635,9 @@ PRODUCTS & SERVICES
         .products .products-groups .group {
           flex: 0 0 47%;
           padding: 5px; } }
-  @media (max-width: 1024px) and (max-width: 768px) {
-    .products .products-groups .group {
-      flex: 0 0 100%; } }
-
+      @media (max-width: 768px) {
+        .products .products-groups .group {
+          flex: 0 0 100%; } }
       .products .products-groups .group .front-slide {
         position: absolute;
         top: 0;
@@ -641,37 +668,46 @@ PRODUCTS & SERVICES
         position: absolute;
         top: 0;
         left: 0;
-        padding: 10px 10px 10px 50px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
         color: black;
         text-align: center; }
-        .products .products-groups .group .back-slide h3 {
-          text-transform: uppercase;
-          font-size: 20px; }
-        .products .products-groups .group .back-slide button {
-          color: black;
-          font-weight: 700;
-          background: transparent;
-          padding: 10px 20px;
-          border-radius: 20px;
-          text-transform: uppercase;
-          display: inline-block;
-          border: 2px solid black; }
-          .products .products-groups .group .back-slide button:hover {
-            background: #ce1b28;
-            color: #fff;
-            border: 2px solid #ce1b28; }
+        .products .products-groups .group .back-slide .back-slide-text {
+          display: flex;
+          padding: 15px; }
+          .products .products-groups .group .back-slide .back-slide-text article:first-child {
+            flex: 0 0 40%; }
+          .products .products-groups .group .back-slide .back-slide-text h3 {
+            text-transform: uppercase;
+            font-size: 20px; }
+          .products .products-groups .group .back-slide .back-slide-text p {
+            font-size: 1rem;
+            padding: 20px 0;
+            line-height: 1.4; }
+          .products .products-groups .group .back-slide .back-slide-text button {
+            color: black;
+            font-weight: 700;
+            background: transparent;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            border: 2px solid black; }
+            .products .products-groups .group .back-slide .back-slide-text button:hover {
+              background: #ce1b28;
+              color: #fff;
+              border: 2px solid #ce1b28;
+              transition: 0.3s ease all; }
       .products .products-groups .group:hover .front-slide {
-        transform: scale(0.6);
-        top: 25px;
-        left: -65%;
+        transform: scale(0.4);
+        top: 40px;
+        left: -35%;
         background: #ce1b28;
         /* background: linear-gradient(to right, rgba($primary, 0.8), rgba($red, 0.8));*/
         color: #fff;
-        transition: 0.3s ease; }
+        transition: 0.3s ease all; }
         .products .products-groups .group:hover .front-slide i {
           color: #fff; }
 
@@ -683,7 +719,7 @@ CONTACT
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
-  padding: 60px 0; }
+  padding: 80px 0; }
   @media (max-width: 768px) {
     .contact {
       height: 120vh; } }
