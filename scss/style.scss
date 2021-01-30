@@ -789,15 +789,11 @@ PRODUCTS & SERVICES
 	
 	color:$white;
 	background: $gunMetal;
-
-	padding: $sectionPadding;
-	
-	h2 {
-		
+	padding: $sectionPadding;	
+	h2 {		
     @include headings();
     color: $white;
-	}
-	
+	}	
 	p {
 		font-size:1.2rem;
 		text-align:center;
@@ -913,10 +909,10 @@ PRODUCTS & SERVICES
             }				
           }						
 				}				
+
 		}
 	}
 }
-
 /*************
 CONTACT
 **************/

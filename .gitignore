@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 .sass-cache
 css/style.css.map
 variables.css.map
 mixins.css.map
-=======
-.sass-cache/*
-
-
-
 css/mixins.css.map
-
 css/style.css.map
-
-css/variables.css.map
->>>>>>> e9c38e56029cf9277d0ca6129e2f365e0ef52cdb
