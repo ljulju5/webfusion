@@ -3,13 +3,33 @@
 const menuBtn = document.querySelector("#menu-btn");
 const menu = document.querySelector("#menu");
 const closeBtn = document.querySelector("#close-btn");
+const content=document.querySelector('.content');
 
 menuBtn.addEventListener("click", () => {
   menu.style.transform = "translateX(0%)";
+	
+	
+
+	
+	 if(window.innerWidth < 768) {
+    
+		 content.style.display="none";
+		 console.log('Work');
+  }
+
 });
 
 closeBtn.addEventListener("click", () => {
   menu.style.transform = "translateX(100%)";
+	
+	
+	
+	  if(window.innerWidth<768) {
+    
+		  content.style.display="block";
+  }
+	
+   
 });
 /* Counter */
 
