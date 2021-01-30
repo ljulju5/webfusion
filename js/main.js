@@ -1,3 +1,31 @@
+/*Sticky Navbar*/
+
+
+const nav=document.querySelector('nav');
+const head=document.querySelector('header');
+const pixel=window.innerHeight;
+
+window.addEventListener('scroll', stick);
+
+function stick() {
+	
+	if(window.scrollY> pixel) {
+		
+		nav.classList.add('sticky');
+		
+		console.log('ide');
+	} 
+	
+	else {
+		
+		nav.classList.remove('sticky');
+	}
+}
+
+
+
+
+
 /*Menu Js */
 
 const menuBtn = document.querySelector("#menu-btn");
@@ -61,3 +89,59 @@ document.addEventListener("scroll", () => {
     console.log(123);
   }
 });
+
+
+
+
+//Technology Cards
+
+const card=document.querySelector('#card-1');
+const card1=document.querySelector('#card-2');
+const card2=document.querySelector('#card-3');
+const card3=document.querySelector('#card-4');
+
+const card4=document.querySelector('#card-5');
+
+const card5=document.querySelector('#card-6');
+
+
+
+card.addEventListener('click', function() {
+	
+	card.classList.toggle('is-flipped');
+	
+	
+});
+
+card1.addEventListener('click', function() {
+	
+	card1.classList.toggle('is-flipped');
+	
+});
+
+card2.addEventListener('click', function() {
+	
+	card2.classList.toggle('is-flipped');
+	
+});
+
+card3.addEventListener('click', function() {
+	
+	card3.classList.toggle('is-flipped');
+	
+});
+
+card4.addEventListener('click', function() {
+	
+	card4.classList.toggle('is-flipped');
+	
+});
+
+card5.addEventListener('click', function() {
+	
+	card5.classList.toggle('is-flipped');
+	
+});
+
+
+
