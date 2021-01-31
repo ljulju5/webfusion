@@ -463,12 +463,6 @@ introduction
 ***********/
 .introduction {
   padding: 80px 0; }
-  .introduction h2 {
-    font-size: 2.2rem;
-    color: #111111;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 50px; }
   .introduction .container {
     display: flex;
     flex-direction: row;
@@ -479,25 +473,51 @@ introduction
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: flex-start;
       padding-right: 20px;
       text-align: justify; }
       .introduction .container article:first-child h2 {
-        color: #ce1b28; }
+        font-size: 2.2rem;
+        color: #111111;
+        font-weight: 400; }
+        .introduction .container article:first-child h2::after {
+          display: block;
+          content: "";
+          width: 60px;
+          height: 3px;
+          background: #ce1b28;
+          margin: 15px 0 30px 0; }
+      .introduction .container article:first-child .introText {
+        display: flex;
+        align-items: flex-start; }
+        .introduction .container article:first-child .introText span {
+          margin-right: 4px;
+          height: 51px;
+          width: 81px;
+          line-height: 51px;
+          border-radius: 50%;
+          text-align: center;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          color: #fff;
+          font-size: 32px;
+          background-color: rgba(206, 27, 40, 0.6);
+          display: inline-block; }
+        .introduction .container article:first-child .introText p {
+          font-size: 1.1rem;
+          color: #111111;
+          line-height: 1.5; }
       .introduction .container article:first-child p {
-        font-size: 1.2rem;
-        color: #111111; }
+        font-size: 1.1rem;
+        color: #111111;
+        line-height: 1.5; }
     .introduction .container article:last-child {
-      flex: 0 0 30%;
-      height: 50vh;
-      filter: hue-rotate(330deg);
+      flex: 0 0 38%;
       border-radius: 30px; }
       .introduction .container article:last-child img {
-        width: auto;
-        height: 100%;
-        border-radius: 30px; }
-        .introduction .container article:last-child img:hover {
-          filter: sepia(90); }
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 1px 1px 5px lightgray; }
 
 /*******principles*********/
 .principles {

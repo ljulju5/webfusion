@@ -612,10 +612,7 @@ Page About us
 introduction
 ***********/
 .introduction {
-    padding: $sectionPadding;
-    h2 {
-        @include headings();
-    }
+    padding: $sectionPadding;    
     .container {
         display:flex;
         flex-direction:row;
@@ -626,31 +623,52 @@ introduction
             display:flex;
             flex-direction:column;
             justify-content:space-between;
-            align-items:flex-end;
+            align-items:flex-start;
             padding-right:20px;
             text-align:justify;	
-            h2 {			
-                color:$primary;
+            h2 {		
+                @include headingsAfter();                
             }
+            .introText {
+              display: flex;
+              align-items: flex-start;
+              span {
+                margin-right: 4px;
+                height: 51px;
+                width: 81px;
+                line-height: 51px;
+                border-radius: 50%;
+                text-align: center;
+                //background-clip: padding-box;
+                box-shadow: 0 1px 1px rgba(0,0,0,.2);
+                color: #fff;
+                font-size: 32px;
+                background-color: rgba($primary, 0.6);
+                display: inline-block;
+              }
+              p {			
+                  font-size: 1.1rem;
+                  color: $secondary; 
+                  line-height: 1.5;                 
+              }
+            }
+            
             p {			
-                font-size: 1.2rem;
-                color: $secondary;
-            }
+              font-size: 1.1rem;
+              color: $secondary;    
+              line-height: 1.5;               
+          }
+           
 
         }
         article:last-child {
-            flex: 0 0 30%;
-            height: 50vh;
-            filter:hue-rotate(330deg);
+            flex: 0 0 38%;
             border-radius: 30px;
             img {
-                width:auto;
-                height: 100%;
+                width:100%;
+                height: auto;
                 border-radius: 30px;
-                &:hover {
-                    filter:sepia(90);
-                }
-
+                box-shadow: 1px 1px 5px lightgray;
             }
         }
     }
