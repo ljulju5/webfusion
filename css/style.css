@@ -50,6 +50,7 @@ header {
         transition: 0.3s ease all;
         cursor: pointer; }
   header .video {
+    object-fit: cover;
     transform: translateX(50%) translateY(50%);
     bottom: 50%;
     height: 100vh;

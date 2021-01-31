@@ -63,6 +63,7 @@ header {
     }
   }
   .video {
+    object-fit: cover;
     transform: translateX(50%) translateY(50%);
     bottom: 50%;
     height: 100vh;
