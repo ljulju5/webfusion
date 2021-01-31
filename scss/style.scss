@@ -21,6 +21,20 @@ body {
   transform: translateX(100%);
 }
 
+
+/************
+sticky-nav
+*************/
+
+.sticky {
+	
+	background: rgba(0,0,0,.7);
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+
 /*************
 Header
 ****************/
@@ -79,6 +93,7 @@ header {
     background: linear-gradient(to right, rgba($primary, 0.6), rgba($secondary, 0.6)), url(../img/bg-blog.jpg);
     background-position: center;
     background-size: cover;
+	object-fit:contain;
   }
   .content {
     position: absolute;
@@ -267,6 +282,196 @@ technologies
   h2 {
     @include headings();
   }
+	
+
+  .container {
+	width: 90%;
+	margin: auto;
+    display: flex;
+    justify-content: space-between;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	  
+	  .card {
+	
+	margin: auto auto;
+	width: 400px;
+	height:500px;
+	perspective:700px;
+	flex: 0 0 31%;
+	margin-bottom:40px;
+	
+		  
+		 .card_inner {
+	
+	width:100%;
+	height:100%;
+	transition: transform 1s;
+	transform-style:preserve-3d;
+	cursor:pointer;
+	position:relative;
+		  
+		  
+		  .card_inner.is-flipped {
+	
+	transform:rotateY(180deg);
+}
+			  
+		  .card_face {
+	
+	position: absolute;
+	width:100%;
+	height:100%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	overflow:hidden;
+	border-radius:16px;
+	box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+	
+
+			  .card_face--front {
+	
+	/*background: linear-gradient(to bottom right ,$red, $orange);*/
+	display:flex;
+	align-items:flex-start;
+	justify-content:center;
+	color: white;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+				  
+				  
+				  
+	
+				  
+			 h2 {
+	
+	color:$primary;
+	font-size:3rem;
+	background: $white;
+	position:absolute;
+	top:0;
+	left:0;
+	padding: 20px;
+	width:100%;
+}
+	  
+	
+}
+			 
+#tech-1 {
+	
+	background-image:url(../img/pic1%20.jpg);
+	 }
+			 
+
+			 
+#tech-2 {
+
+	background-image: url(../img/pic2.jpg)					 				
+	 }
+			 
+#tech-3 {
+					 					 
+	background-image:url(../img/pic3.jpg);
+	 }
+			 
+#tech-4 {
+					 					 
+	background-image:url(../img/pic4.jpg)
+	 }
+			 
+#tech-5 {
+					 					  
+	background-image:url(../img/pic5.jpg);
+	 }
+	
+	#tech-6 {
+					 					  
+	background-image:url(../img/pic6.jpg);
+	 }
+				  
+	  
+	
+				  
+		
+			  
+	.card_face--back {
+	
+	background:$white;
+	transform:rotateY(180deg);
+		
+		.card_content {
+	width: 100%;
+	height:100%;
+		
+			.card_header {
+	
+	position:relative;
+	padding: 30px;
+	background-image:linear-gradient(to bottom left, $red, $orange);
+	border-radius: 0 0 50% 0;
+	color:$light;
+	font-weight:600;
+				
+	
+
+	.card_header h2 {
+	color:$light;
+	font-size:32px;
+	font-weight:900;
+	text-transform:uppercase;
+	text-align:center;
+	
+          }
+				
+
+	
+       }
+			
+			.card_body {
+				padding: 10px;
+				background:$white;
+				
+				
+				h2 {
+					padding: 10px 0;
+				}
+				
+				p {
+					text-align:left;
+				}
+				
+			}
+	
+	
+   } 
+		  
+			  
+	
+}
+		  
+
+		  }
+		  
+		  
+		  .card_inner.is-flipped {
+	
+	transform:rotateY(180deg);
+}
+
+		  
+		  }
+
+  }
+}
+	
+	
+	/*
   .container {
     display: flex;
     justify-content: space-between;
@@ -310,7 +515,9 @@ technologies
       }
     }
   }
-}
+	
+	*/
+
 /**************
 about
 **************/
@@ -807,15 +1014,11 @@ PRODUCTS & SERVICES
 	
 	color:$white;
 	background: $gunMetal;
-
-	padding: $sectionPadding;
-	
-	h2 {
-		
+	padding: $sectionPadding;	
+	h2 {		
     @include headings();
     color: $white;
-	}
-	
+	}	
 	p {
 		font-size:1.2rem;
 		text-align:center;
@@ -931,10 +1134,10 @@ PRODUCTS & SERVICES
             }				
           }						
 				}				
+
 		}
 	}
 }
-
 /*************
 CONTACT
 **************/

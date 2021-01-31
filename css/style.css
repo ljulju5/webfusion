@@ -17,6 +17,15 @@ body {
 .active {
   transform: translateX(100%); }
 
+/************
+sticky-nav
+*************/
+.sticky {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 /*************
 Header
 ****************/
@@ -67,7 +76,8 @@ header {
     height: 100vh;
     background: linear-gradient(to right, rgba(206, 27, 40, 0.6), rgba(17, 17, 17, 0.6)), url(../img/bg-blog.jpg);
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    object-fit: contain; }
   header .content {
     position: absolute;
     z-index: 10000;
@@ -212,39 +222,144 @@ technologies
     text-align: center;
     margin-bottom: 50px; }
   .technologies .container {
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap; }
-    .technologies .container article {
+    .technologies .container .card {
+      margin: auto auto;
+      width: 400px;
+      height: 500px;
+      perspective: 700px;
+      flex: 0 0 31%;
+      margin-bottom: 40px; }
+      .technologies .container .card .card_inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative; }
+        .technologies .container .card .card_inner .card_inner.is-flipped {
+          transform: rotateY(180deg); }
+        .technologies .container .card .card_inner .card_face {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          overflow: hidden;
+          border-radius: 16px;
+          box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2); }
+        .technologies .container .card .card_inner .card_face--front {
+          /*background: linear-gradient(to bottom right ,$red, $orange);*/
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          color: white;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center; }
+          .technologies .container .card .card_inner .card_face--front h2 {
+            color: #ce1b28;
+            font-size: 3rem;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            width: 100%; }
+        .technologies .container .card .card_inner #tech-1 {
+          background-image: url(../img/pic1%20.jpg); }
+        .technologies .container .card .card_inner #tech-2 {
+          background-image: url(../img/pic2.jpg); }
+        .technologies .container .card .card_inner #tech-3 {
+          background-image: url(../img/pic3.jpg); }
+        .technologies .container .card .card_inner #tech-4 {
+          background-image: url(../img/pic4.jpg); }
+        .technologies .container .card .card_inner #tech-5 {
+          background-image: url(../img/pic5.jpg); }
+        .technologies .container .card .card_inner #tech-6 {
+          background-image: url(../img/pic6.jpg); }
+        .technologies .container .card .card_inner .card_face--back {
+          background: #fff;
+          transform: rotateY(180deg); }
+          .technologies .container .card .card_inner .card_face--back .card_content {
+            width: 100%;
+            height: 100%; }
+            .technologies .container .card .card_inner .card_face--back .card_content .card_header {
+              position: relative;
+              padding: 30px;
+              background-image: linear-gradient(to bottom left, #FFCE00, #FE4880);
+              border-radius: 0 0 50% 0;
+              color: #F3F3F3;
+              font-weight: 600; }
+              .technologies .container .card .card_inner .card_face--back .card_content .card_header .card_header h2 {
+                color: #F3F3F3;
+                font-size: 32px;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-align: center; }
+            .technologies .container .card .card_inner .card_face--back .card_content .card_body {
+              padding: 10px;
+              background: #fff; }
+              .technologies .container .card .card_inner .card_face--back .card_content .card_body h2 {
+                padding: 10px 0; }
+              .technologies .container .card .card_inner .card_face--back .card_content .card_body p {
+                text-align: left; }
+      .technologies .container .card .card_inner.is-flipped {
+        transform: rotateY(180deg); }
+
+	/*
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    article {
       flex: 0 0 30%;
+//      padding: 20px 15px;
       text-align: center;
       box-shadow: 1px 1px 5px lightgray;
       margin: 30px 0;
+      // background: $white;
+      // height: 250px;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      border-radius: 8px; }
-      .technologies .container article .bgImg {
+      border-radius: 8px;
+      .bgImg {
         width: 100%;
         height: auto;
         overflow: hidden;
-        border-radius: 8px 8px 0 0; }
-      .technologies .container article h3 {
-        color: #111111;
+        border-radius: 8px 8px 0 0;
+      }
+      h3 {
+        color: $secondary;
         font-size: 1.3em;
-        margin-top: 25px; }
-      .technologies .container article p {
-        color: #111111;
+        margin-top: 25px;
+      }
+      p {
+        color: $secondary;
         text-align: justify;
-        padding: 25px; }
-      .technologies .container article img {
+        padding: 25px;
+      }
+      img {
         width: 100%;
         height: auto;
-        max-height: 250px; }
-      .technologies .container article:hover {
-        box-shadow: 1px 1px 5px #111111;
-        transition: 0.3s ease all; }
-
+        max-height: 250px;
+      }
+      &:hover {
+        box-shadow: 1px 1px 5px $secondary;
+        transition: $transition;
+      }
+    }
+  }
+	
+	*/
 /**************
 about
 **************/
