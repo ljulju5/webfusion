@@ -254,6 +254,12 @@ mission
   padding: $sectionPadding;
   article {
     flex: 0 0 30%;
+    @media(max-width:900px) {		  
+		  flex: 0 0 100%;		  
+		  h3 {			  
+			  margin-top: 20px;
+		  }
+	  }
     h3 {
       padding-bottom: 20px;
       font-size: 1.5rem;
@@ -297,6 +303,19 @@ technologies
       perspective:700px;
       flex: 0 0 30%;
       margin-bottom:50px;
+      @media(max-width:1024px) {			  
+			  flex: 0 0 45%;
+			  h2 {				  
+				  font-size:1.7rem;
+			  }
+			  p {
+				  font-size: 0.9rem;
+			  }
+			  @media(max-width:768px) {				  
+				  flex: 0 0 100%;			
+			  }
+		  }
+
 		 .card_inner {	
         width:100%;
         height:100%;
@@ -336,6 +355,9 @@ technologies
             left:0;
             padding: 20px;
             width:100%;
+            @media(max-width:1024px) {					 
+              font-size:1.7rem;
+            }
           }
         }			 
 #tech-1 {	
@@ -385,7 +407,18 @@ technologies
 				}				
 				p {
 					text-align:left;
-				}				
+        }			
+        @media(max-width:768px) {					
+					display:flex;
+					flex-direction:column;
+					justify-content:center;
+					align-items:center;
+          padding: 40px; 
+           // proveriti da li da se prebaci gore u p
+						p {
+							text-align:justify;
+						}							
+				}	
 			}
    } 
   }
@@ -395,55 +428,7 @@ technologies
       }
 	  }
   }
-}
-	
-	
-	/*
-  .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    article {
-      flex: 0 0 30%;
-//      padding: 20px 15px;
-      text-align: center;
-      box-shadow: 1px 1px 5px lightgray;
-      margin: 30px 0;
-      // background: $white;
-      // height: 250px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      border-radius: 8px;
-      .bgImg {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        border-radius: 8px 8px 0 0;
-      }
-      h3 {
-        color: $secondary;
-        font-size: 1.3em;
-        margin-top: 25px;
-      }
-      p {
-        color: $secondary;
-        text-align: justify;
-        padding: 25px;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-      }
-      &:hover {
-        box-shadow: 1px 1px 5px $secondary;
-        transition: $transition;
-      }
-    }
-  }
-	
-	*/
+}	
 
 /**************
 about
@@ -463,11 +448,24 @@ about
     font-weight: 300;
     margin: 15px 0;
     color: $white;
+    @media(max-width:1024px) {			
+			font-size: 1.9rem;			
+				@media(max-width:768px) {			
+			font-size: 1.5rem;
+		    }
+		}
   }
   p {
     color: $white;
     font-size: 1.2rem;
     margin-top: 40px;
+    @media(max-width:1024px) {			
+			font-size: 1.1rem;			
+				@media(max-width:900px) {			
+                    font-size: 0.9rem;
+                    padding-bottom:20px;
+                }
+		    }
   }
 }
 /**************
@@ -492,18 +490,27 @@ counter
     box-shadow: 1px 1px 10px $secondary;
     i {
         color: $primary;
+        @media(max-width:900px) {			
+          font-size: 1.3rem;
+        }
     }
     h3 {
       color: $secondary;
       font-size: 0.9rem;
       font-weight: 700;
       padding-bottom: 10px;
+      @media(max-width:900px) {			
+        font-size: 0.8rem;
+      }
     }
     p {
       font-weight: 700;
       margin: 10px 0;
       color: $secondary;
       font-size: 2.2rem;
+      @media(max-width:900px) {			
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -528,6 +535,10 @@ team
       text-align: center;
       box-shadow: 1px 1px 5px $secondary;
       border-radius: 8px;
+      @media(max-width:800px) {			
+        flex: 0 0 100%;
+        margin-top:70px;
+      }
       img {
         width: 100px;
         height: 100px;
@@ -577,111 +588,67 @@ footer {
 	 flex-wrap:wrap;
 	  
 	  	
-    .hours {
-		
-		  		@media(max-width:1024px) {
-		
-		display:flex;
-		
-		justify-content:center;
-		align-items:flex-end;
-		flex-direction:column;
-		flex-wrap:wrap;
-		
-		order:2;
-		flex: 0 0 45%;
-		
-	}
+    .hours {		
+		  @media(max-width:1024px) {		
+        display:flex;      
+        justify-content:center;
+        align-items:flex-end;
+        flex-direction:column;
+        flex-wrap:wrap;      
+        order:2;
+        flex: 0 0 45%;      
+      }
       h3 {
         font-size: 1.5rem;
         margin-bottom: 20px;
 		  
-		  		@media(max-width:1024px) {
-		
-		font-size: 1.2rem;
-		/*margin-bottom:40px;*/
-		margin-bottom:5px;
-		
-		
-		
-	}
-      }
-		
-	
+		  	@media(max-width:1024px) {		
+          font-size: 1.2rem;
+          /*margin-bottom:40px;*/
+          margin-bottom:5px;		
+        }
+      }		
 		}
     
     p {
       margin-top: 5px;
-		
-		
-		
     }
 	  
-	  .industry {
-		  
-		  		@media(max-width:1024px) {
-		
-		flex: 0 0 100%;
-		text-align:center;
-		padding-bottom: 20px;
-		display:block;
-		
-		
-		font-size: 1.3rem;
-		
-		
-		
-	}
-		  
-		  
+	  .industry {		  
+      @media(max-width:1024px) {		
+        flex: 0 0 100%;
+        text-align:center;
+        padding-bottom: 20px;
+        display:block;
+        font-size: 1.3rem;
+      }		  
 	  }
-    .icons {
-		
-		
-		  		@media(max-width:1024px) {
-		
-		display:flex;
-		
-		justify-content:flex-start;
-		align-items: center;
-		flex-wrap:wrap;
-		order:3;
-		flex: 0 0 45%;
-		
-	}
+    .icons {	
+		  	@media(max-width:1024px) {		
+          display:flex;		
+          justify-content:flex-start;
+          align-items: center;
+          flex-wrap:wrap;
+          order:3;
+          flex: 0 0 45%;          
+        }
       h3 {
         font-size: 1rem;
         margin-top: 5px;
-        margin-bottom: 20px;
-		  
-		
-		  		@media(max-width:1024px) {
-		
-		flex: 0 0 100%;
-		font-size: 1.2rem;
-		
-		
-	}  
-	      
+        margin-bottom: 20px;	  
+		  	@media(max-width:1024px) {		
+          flex: 0 0 100%;
+          font-size: 1.2rem;	
+        } 
       }
       a {
         color: $white;
         i {
           font-size: 2.4rem;
-          margin-right: 10px;
-			
-			 
-		  		@media(max-width:1024px) {
-		
-		font-size: 2rem;
-		
-					
-		
-		
-		
-	}
-			
-			
+          margin-right: 10px;	
+		  		@media(max-width:1024px) {		
+            font-size: 2rem;
+          }		
           &:hover {
             color: $primary;
             transition: $transition;
@@ -937,8 +904,6 @@ PRODUCTS & SERVICES
 
 
 .products {
-	
-	
 	color:$white;
 	background: $gunMetal;
 	padding: $sectionPadding;	
@@ -1068,155 +1033,150 @@ PRODUCTS & SERVICES
 /*************
 CONTACT
 **************/
-
-.contact {
-	
+.contact {	
 	background-image:linear-gradient(rgba($gunMetal,0.8),rgba($gunMetal,0.95)), url(../img/man.jpg);
-
 	background-size:cover;
 	background-repeat:no-repeat;
 	height: 90vh;
 	padding:$sectionPadding;
-	
-	@media(max-width:768px) {
-		
-		height:120vh;
-		
-		
-	}
-	
-	
+	@media(max-width:1024px) { 
+		height:100vh;		
+    @media(max-width:768px) {		
+      height:120vh;	
+    }
+	}	
 	.container {
 		height:100%;
 		display:flex;
 		justify-content:space-between;
 		align-items:stretch;
 		flex-wrap:wrap;
-		
-		
-		
 		article:first-child {
-			flex:0 0 50%;
+			flex:0 0 38%;
 			display:flex;
 			flex-direction:column;
 			justify-content:center;
 			align-items:flex-start;
 			color:$white;
 			text-align:left;
-			padding-right:20px;
-			
+			padding-right:20px;			
 			@media(max-width:1024px) {
 				flex: 0 0 50%;
 				h2 {
 					font-size: 2rem;
-				}
-				
+				}				
 				p {
 					font-size:1.1rem;
-				}
-				
-						@media(max-width:768px) {
-		
-		flex: 0 0 100%;
-		margin-bottom: 20px;
-		
-		
-	}
+				}				
+				@media(max-width:768px) {
+          flex: 0 0 100%;
+          margin-bottom: 20px;
+        }
 			}
-			
-	
-			
-			h1 {
-				
+			h1 {				
 				font-size: 2.5rem;
 				margin-bottom:10px;
-			}
-			
-			p {
-				
+			}			
+			p {				
 				font-size:1.3rem;
-			}
-			
-		}
-		
-		article:last-child {
-			
-			flex: 0 0 50%;
+			}			
+		}		
+		article:last-child {			
+			flex: 0 0 60%;
 			display:flex;
 			align-items:center;
-			
-			
-			@media(max-width:1024px) {
-				
-				flex: 0 0 30%;
-				
-				
-							@media(max-width:768px) {
-		
-		flex: 0 0 100%;
-		margin-top: 20px;
-		
-		
-	}
-			
+			@media(max-width:1024px) {				
+				flex: 0 0 30%;			
+        @media(max-width:768px) {		
+          flex: 0 0 100%;
+          margin-top: 20px;
+        }			
 			}
-			
-	
 			form {
 			display:flex;
 			justify-content:space-between;
 			align-items:center;
-			flex-wrap:wrap;
-			
+			flex-wrap:wrap;			
 			input {
 				flex: 0 0 48%;
-			
-				border-radius: 30px 0px 30px 0;
 				padding: 10px;
-				margin-bottom: 20px;
-				
-						@media(max-width:1024px) {
-		
-		flex: 0 0 100%;
-		
-		
-		
-	}
-				
+				margin-bottom: 20px;				
+				@media(max-width:1024px) {		
+          flex: 0 0 100%;
+        }				
 			}
-			
-				
 				input[type="submit"] {  
-					
-					border-radius:20px;
-					
-							@media(max-width:768px) {
-		
-		display:inline-block;
-		flex: 0 0 48%;
-		
-		
-	}
-				}
-			
+          @media(max-width:1024px) {		
+            display:inline-block;
+            flex: 0 0 32%;
+          }
+				}			
 			textarea {
-				
 				flex: 0 0 100%;
 				padding: 20px;
 				margin-bottom: 20px;
-				border-radius: 30px 0px 30px 0;
-			}
-				
-				
-			
+			}			
+		}		
 		}
-		
-		}
-	}
-	
-	
-	
+	}	
 
 }
 
+/*********** map *************/
 
+.map {
+  background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.5)),url(../img/traffic.jpg);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	color:$white;
+	.column {
+	padding: 60px 150px;	
+	h2 {		
+		@include headings;
+		color:$white;
+	}
+      .contact-region {	
+      display:grid;
+      grid-template: "adress map"
+              "email map";				   
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 300px 1fr;
+        @media(max-width:900px) {
+          display:flex;
+          flex-direction:row;
+          flex-wrap:wrap;
+          justify-content:space-between;
+          align-items:flex-start;			
+          .contact-adress {
+          flex: 0 0 48%;
+          order:1;			
+          }			
+            .contact-email {
+          flex: 0 0 48%;
+          order:2;
+        }
+          .contact-map {
+          flex: 0 0 100%;
+          order:3;
+          min-height:400px;
+        }
+      }
+        .contact-adress {
+          grid-area: adress;
+          padding-bottom: 15px;
+          font-size:14px;			
+        }		
+        .contact-email {
+          grid-area: email;
+          font-size: 14px;			
+        }		
+        .contact-map {
+        grid-area: map;
+        width:100%;
+        height:100%;
+      }
+    }
+	
+  }	
+}

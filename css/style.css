@@ -196,6 +196,11 @@ mission
   padding: 80px 0; }
   .mission article {
     flex: 0 0 30%; }
+    @media (max-width: 900px) {
+      .mission article {
+        flex: 0 0 100%; }
+        .mission article h3 {
+          margin-top: 20px; } }
     .mission article h3 {
       padding-bottom: 20px;
       font-size: 1.5rem; }
@@ -235,6 +240,17 @@ technologies
       perspective: 700px;
       flex: 0 0 30%;
       margin-bottom: 50px; }
+      @media (max-width: 1024px) {
+        .technologies .container .card {
+          flex: 0 0 45%; }
+          .technologies .container .card h2 {
+            font-size: 1.7rem; }
+          .technologies .container .card p {
+            font-size: 0.9rem; } }
+  @media (max-width: 1024px) and (max-width: 768px) {
+    .technologies .container .card {
+      flex: 0 0 100%; } }
+
       .technologies .container .card .card_inner {
         width: 100%;
         height: 100%;
@@ -272,6 +288,9 @@ technologies
             left: 0;
             padding: 20px;
             width: 100%; }
+            @media (max-width: 1024px) {
+              .technologies .container .card .card_inner .card_face--front h2 {
+                font-size: 1.7rem; } }
         .technologies .container .card .card_inner #tech-1 {
           background-image: url(../img/pic1%20.jpg); }
         .technologies .container .card .card_inner #tech-2 {
@@ -310,55 +329,18 @@ technologies
                 padding: 10px 0; }
               .technologies .container .card .card_inner .card_face--back .card_content .card_body p {
                 text-align: left; }
+              @media (max-width: 768px) {
+                .technologies .container .card .card_inner .card_face--back .card_content .card_body {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 40px; }
+                  .technologies .container .card .card_inner .card_face--back .card_content .card_body p {
+                    text-align: justify; } }
       .technologies .container .card .card_inner.is-flipped {
         transform: rotateY(180deg); }
 
-	/*
-  .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    article {
-      flex: 0 0 30%;
-//      padding: 20px 15px;
-      text-align: center;
-      box-shadow: 1px 1px 5px lightgray;
-      margin: 30px 0;
-      // background: $white;
-      // height: 250px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      border-radius: 8px;
-      .bgImg {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        border-radius: 8px 8px 0 0;
-      }
-      h3 {
-        color: $secondary;
-        font-size: 1.3em;
-        margin-top: 25px;
-      }
-      p {
-        color: $secondary;
-        text-align: justify;
-        padding: 25px;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-      }
-      &:hover {
-        box-shadow: 1px 1px 5px $secondary;
-        transition: $transition;
-      }
-    }
-  }
-	
-	*/
 /**************
 about
 **************/
@@ -377,10 +359,24 @@ about
     font-weight: 300;
     margin: 15px 0;
     color: #fff; }
+    @media (max-width: 1024px) {
+      .about h3 {
+        font-size: 1.9rem; } }
+  @media (max-width: 1024px) and (max-width: 768px) {
+    .about h3 {
+      font-size: 1.5rem; } }
+
   .about p {
     color: #fff;
     font-size: 1.2rem;
     margin-top: 40px; }
+    @media (max-width: 1024px) {
+      .about p {
+        font-size: 1.1rem; } }
+  @media (max-width: 1024px) and (max-width: 900px) {
+    .about p {
+      font-size: 0.9rem;
+      padding-bottom: 20px; } }
 
 /**************
 counter
@@ -404,16 +400,25 @@ counter
     box-shadow: 1px 1px 10px #111111; }
     .counter .container i {
       color: #ce1b28; }
+      @media (max-width: 900px) {
+        .counter .container i {
+          font-size: 1.3rem; } }
     .counter .container h3 {
       color: #111111;
       font-size: 0.9rem;
       font-weight: 700;
       padding-bottom: 10px; }
+      @media (max-width: 900px) {
+        .counter .container h3 {
+          font-size: 0.8rem; } }
     .counter .container p {
       font-weight: 700;
       margin: 10px 0;
       color: #111111;
       font-size: 2.2rem; }
+      @media (max-width: 900px) {
+        .counter .container p {
+          font-size: 1.5rem; } }
 
 /**************
 team
@@ -439,6 +444,10 @@ team
       text-align: center;
       box-shadow: 1px 1px 5px #111111;
       border-radius: 8px; }
+      @media (max-width: 800px) {
+        .team .container article {
+          flex: 0 0 100%;
+          margin-top: 70px; } }
       .team .container article img {
         width: 100px;
         height: 100px;
@@ -854,9 +863,13 @@ CONTACT
   background-repeat: no-repeat;
   height: 90vh;
   padding: 80px 0; }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    .contact {
+      height: 100vh; } }
+  @media (max-width: 1024px) and (max-width: 768px) {
     .contact {
       height: 120vh; } }
+
   .contact .container {
     height: 100%;
     display: flex;
@@ -864,7 +877,7 @@ CONTACT
     align-items: stretch;
     flex-wrap: wrap; }
     .contact .container article:first-child {
-      flex: 0 0 50%;
+      flex: 0 0 38%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -890,7 +903,7 @@ CONTACT
       .contact .container article:first-child p {
         font-size: 1.3rem; }
     .contact .container article:last-child {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
       display: flex;
       align-items: center; }
       @media (max-width: 1024px) {
@@ -908,22 +921,68 @@ CONTACT
         flex-wrap: wrap; }
         .contact .container article:last-child form input {
           flex: 0 0 48%;
-          border-radius: 30px 0px 30px 0;
           padding: 10px;
           margin-bottom: 20px; }
           @media (max-width: 1024px) {
             .contact .container article:last-child form input {
               flex: 0 0 100%; } }
-        .contact .container article:last-child form input[type="submit"] {
-          border-radius: 20px; }
-          @media (max-width: 768px) {
-            .contact .container article:last-child form input[type="submit"] {
-              display: inline-block;
-              flex: 0 0 48%; } }
+        @media (max-width: 1024px) {
+          .contact .container article:last-child form input[type="submit"] {
+            display: inline-block;
+            flex: 0 0 32%; } }
         .contact .container article:last-child form textarea {
           flex: 0 0 100%;
           padding: 20px;
-          margin-bottom: 20px;
-          border-radius: 30px 0px 30px 0; }
+          margin-bottom: 20px; }
+
+/*********** map *************/
+.map {
+  background-image: linear-gradient(to right, rgba(206, 27, 40, 0.5), rgba(17, 17, 17, 0.5)), url(../img/traffic.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff; }
+  .map .column {
+    padding: 60px 150px; }
+    .map .column h2 {
+      font-size: 2.2rem;
+      color: #111111;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 60px;
+      color: #fff; }
+    .map .column .contact-region {
+      display: grid;
+      grid-template: "adress map" "email map";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 300px 1fr; }
+      @media (max-width: 900px) {
+        .map .column .contact-region {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start; }
+          .map .column .contact-region .contact-adress {
+            flex: 0 0 48%;
+            order: 1; }
+          .map .column .contact-region .contact-email {
+            flex: 0 0 48%;
+            order: 2; }
+          .map .column .contact-region .contact-map {
+            flex: 0 0 100%;
+            order: 3;
+            min-height: 400px; } }
+      .map .column .contact-region .contact-adress {
+        grid-area: adress;
+        padding-bottom: 15px;
+        font-size: 14px; }
+      .map .column .contact-region .contact-email {
+        grid-area: email;
+        font-size: 14px; }
+      .map .column .contact-region .contact-map {
+        grid-area: map;
+        width: 100%;
+        height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
