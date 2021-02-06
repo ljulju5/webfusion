@@ -13,6 +13,9 @@ body {
 .container {
   width: 75%;
   margin: 0 auto; }
+  @media (max-width: 1024px) {
+    .container {
+      width: 80%; } }
 
 .active {
   transform: translateX(100%); }
@@ -931,10 +934,10 @@ CONTACT
   padding: 80px 0; }
   @media (max-width: 1024px) {
     .contact {
-      height: 100vh; } }
+      height: 60vh; } }
   @media (max-width: 1024px) and (max-width: 768px) {
     .contact {
-      height: 120vh; } }
+      height: 80vh; } }
 
   .contact .container {
     height: 100%;
@@ -954,20 +957,26 @@ CONTACT
       @media (max-width: 1024px) {
         .contact .container article:first-child {
           flex: 0 0 50%; }
-          .contact .container article:first-child h2 {
-            font-size: 2rem; }
           .contact .container article:first-child p {
             font-size: 1.1rem; } }
   @media (max-width: 1024px) and (max-width: 768px) {
     .contact .container article:first-child {
       flex: 0 0 100%;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      align-items: center; } }
 
-      .contact .container article:first-child h1 {
+      .contact .container article:first-child h2 {
         font-size: 2.5rem;
-        margin-bottom: 10px; }
+        margin-bottom: 30px; }
+        @media (max-width: 768px) {
+          .contact .container article:first-child h2 {
+            font-size: 2rem; } }
+        @media (max-width: 1024px) {
+          .contact .container article:first-child h2 {
+            font-size: 2rem; } }
       .contact .container article:first-child p {
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        text-align: justify; }
     .contact .container article:last-child {
       flex: 0 0 60%;
       display: flex;
@@ -1062,7 +1071,8 @@ CONTACT
             min-height: 400px; } }
       .map .column .contact-region .contact-address {
         grid-area: adress;
-        font-size: 14px; }
+        font-size: 14px;
+        margin-bottom: 30px; }
         .map .column .contact-region .contact-address h4 {
           margin: 15px 0 5px 0; }
       .map .column .contact-region .contact-email {
