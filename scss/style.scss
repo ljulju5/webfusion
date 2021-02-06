@@ -799,7 +799,7 @@ blog
         display: flex;
         margin-bottom: 30px;
         border-radius: 10px;
-        box-shadow: 1px 1px 10px $secondary;
+        box-shadow: 1px 1px 5px $secondary;
         .featured-image {
           padding: 20px;
           img {
@@ -824,7 +824,6 @@ blog
           }
           button {
             background: $primary;
-            color: $white;
             padding: 5px;
             font-size: 1.1rem;
             margin-top: 15px;
@@ -834,7 +833,11 @@ blog
               transition: $transition;
               color: $white;
               background: $secondary;
-              box-shadow: 1px 1px 10px $secondary;
+              box-shadow: 1px 1px 5px $secondary;
+            }
+            a {
+              color: $white;
+              text-decoration: none;
             }
           }
         }
@@ -845,7 +848,7 @@ blog
       .widget {
         margin-bottom: 30px;
         border-radius: 10px;
-        box-shadow: 1px 1px 10px $secondary;
+        box-shadow: 1px 1px 5px $secondary;
         padding: 38px;
 
         h3 {
@@ -863,7 +866,8 @@ blog
               color: $secondary;
               text-decoration: none;
               &:hover {
-                text-shadow: 2px 2px 5px rgba($secondary, 0.5);
+                color: $primary;
+                text-shadow: .2px .2px .5px rgba($secondary, 0.5);
                 transition: $transition;
               }
             }
