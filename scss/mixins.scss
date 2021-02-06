@@ -19,3 +19,22 @@
         margin: 15px 0 30px 0;               
     }
 }
+
+@mixin btn {
+  background: $primary;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  border: 0;
+  cursor: pointer;
+  &:hover {
+    transition: $transition;
+    color: $white;
+    background: $secondary;
+    box-shadow: 1px 1px 5px $secondary;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}

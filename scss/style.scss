@@ -110,10 +110,16 @@ header {
       font-size: 4em;
       letter-spacing: 7px;
       margin-bottom: 30px;
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+      }
     }
     p {
       text-align: center;
       font-size: 1.3em;
+      @media (max-width: 1024px) {
+        font-size: 1.1rem;
+      }
     }
   }
 }
@@ -231,20 +237,27 @@ mission
 **************/
 .mission {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #ffffff;
   padding: $sectionPadding;
   article {
     flex: 0 0 30%;
-    @media (max-width: 900px) {
+    margin-bottom: 30px;
+    @media (max-width: 1024px) {
       flex: 0 0 100%;
       h3 {
-        margin-top: 20px;
+        padding-bottom: 10px;
       }
     }
     h3 {
       padding-bottom: 20px;
       font-size: 1.5rem;
+      @media (max-width: 1024px) {
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
       &::after {
         display: block;
         content: "";
@@ -252,7 +265,9 @@ mission
         height: 3px;
         background: $primary;
         margin: 15px 0;
-        //box-shadow: 1px 1px 0px #236351;
+        @media (max-width: 1024px) {
+          margin: 15px auto;
+        }
       }
     }
     p {
@@ -656,20 +671,36 @@ Page About us
   }
   article {
     flex: 0 0 45%;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: center;
+    } 
     h3 {
       font-size: 3rem;
       font-weight: 600;
       color: $primary;
-      text-shadow: 1px 1px 0px $lightGray;
+      text-shadow: 1px 1px 0px $lightGray; 
+      @media (max-width: 1024px) {
+        font-size: 2rem;
+      }
     }
   }
   .value {
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: center;
+    } 
     article {
       flex: 0 0 45%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+        text-align: center;
+      } 
       i {
         font-size: 1.4rem;
         padding-bottom: 15px;
@@ -697,6 +728,7 @@ introduction
   padding: $sectionPadding;
   .container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -708,8 +740,19 @@ introduction
       align-items: flex-start;
       padding-right: 20px;
       text-align: justify;
+      margin-bottom: 30px;
+      @media (max-width: 1024px) {
+        flex: 0 0 100%;
+        align-items: center;
+      }
       h2 {
         @include headingsAfter();
+        @media (max-width: 1024px) {
+          font-size: 1.8rem;
+          &::after {
+            margin: 15px auto 30px auto;    
+          }
+        }
       }
       .introText {
         display: flex;
@@ -732,6 +775,9 @@ introduction
           font-size: 1.1rem;
           color: $secondary;
           line-height: 1.5;
+          @media (max-width: 1024px) {
+            font-size: 1rem;
+          }
         }
       }
 
@@ -739,11 +785,18 @@ introduction
         font-size: 1.1rem;
         color: $secondary;
         line-height: 1.5;
+        @media (max-width: 1024px) {
+          font-size: 1rem;
+        }
       }
     }
     article:last-child {
       flex: 0 0 38%;
-      border-radius: 30px;
+      border-radius: 30px;      
+      @media (max-width: 1024px) {
+        flex: 0 0 100%;
+        align-items: center;
+      }
       img {
         width: 100%;
         height: auto;
@@ -774,6 +827,7 @@ introduction
   }
   p {
     font-size: 1.2rem;
+    padding: 0 30px;
   }
 }
 
@@ -799,7 +853,7 @@ blog
         display: flex;
         margin-bottom: 30px;
         border-radius: 10px;
-        box-shadow: 1px 1px 10px $secondary;
+        box-shadow: 1px 1px 5px $secondary;
         .featured-image {
           padding: 20px;
           img {
@@ -823,19 +877,7 @@ blog
             margin-bottom: 15px;
           }
           button {
-            background: $primary;
-            color: $white;
-            padding: 5px;
-            font-size: 1.1rem;
-            margin-top: 15px;
-            border: 0;
-            cursor: pointer;
-            &:hover {
-              transition: $transition;
-              color: $white;
-              background: $secondary;
-              box-shadow: 1px 1px 10px $secondary;
-            }
+            @include btn;
           }
         }
       }
@@ -845,7 +887,7 @@ blog
       .widget {
         margin-bottom: 30px;
         border-radius: 10px;
-        box-shadow: 1px 1px 10px $secondary;
+        box-shadow: 1px 1px 5px $secondary;
         padding: 38px;
 
         h3 {
@@ -863,7 +905,8 @@ blog
               color: $secondary;
               text-decoration: none;
               &:hover {
-                text-shadow: 2px 2px 5px rgba($secondary, 0.5);
+                color: $primary;
+                text-shadow: .2px .2px .5px rgba($secondary, 0.5);
                 transition: $transition;
               }
             }
@@ -889,6 +932,7 @@ PRODUCTS & SERVICES
   p {
     font-size: 1.2rem;
     text-align: center;
+    padding: 0 30px;
   }
   .products-groups {
     display: flex;
@@ -906,7 +950,7 @@ PRODUCTS & SERVICES
       position: relative;
       box-shadow: 2px 2px 4px $darkGray;
       margin-top: 50px;
-      @media (max-width: 1024px) {
+      @media (max-width: 1290px) {
         flex: 0 0 47%;
         padding: 5px;
       }
@@ -936,6 +980,7 @@ PRODUCTS & SERVICES
         }
         i {
           color: gray;
+          padding-bottom: 10px;
         }
       }
 
@@ -958,32 +1003,25 @@ PRODUCTS & SERVICES
           display: flex;
           padding: 15px;
           article:first-child {
-            flex: 0 0 40%;
+            flex: 0 0 35%;
           }
           h3 {
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 1.2rem;
+            @media (max-width: 1290px) {
+              font-size: 1rem;
+            }
           }
           p {
             font-size: 1rem;
-            padding: 20px 0;
+            padding: 20px 5px 20px 0;
             line-height: 1.4;
+            @media (max-width: 1290px) {
+              font-size: .9rem;
+            }
           }
           button {
-            color: black;
-            font-weight: 700;
-            background: transparent;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            display: inline-block;
-            border: 2px solid black;
-            &:hover {
-              background: $primary;
-              color: $white;
-              border: 2px solid $primary;
-              transition: $transition;
-            }
+            @include btn;
           }
         }
       }
@@ -1080,6 +1118,14 @@ CONTACT
           }
         }
         input[type="submit"] {
+          @include btn;
+          border-radius: 0;
+          text-transform: none;
+          font-weight: 300;
+          &:hover {
+            background-color: $white;
+            color: $secondary;
+          }
           @media (max-width: 1024px) {
             display: inline-block;
             flex: 0 0 32%;
@@ -1104,7 +1150,7 @@ CONTACT
   background-repeat: no-repeat;
   color: $white;
   .column {
-    padding: 60px 150px;
+    padding: $sectionPadding;
     h2 {
       @include headings;
       color: $white;
@@ -1122,7 +1168,7 @@ CONTACT
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        .contact-adress {
+        .contact-address {
           flex: 0 0 48%;
           order: 1;
         }
@@ -1136,14 +1182,27 @@ CONTACT
           min-height: 400px;
         }
       }
-      .contact-adress {
+      .contact-address {
         grid-area: adress;
-        padding-bottom: 15px;
-        font-size: 14px;
+        font-size: 14px;        
+        h4 {
+          margin: 15px 0 5px 0;
+        }
       }
       .contact-email {
         grid-area: email;
         font-size: 14px;
+        h4 {
+          margin: 15px 0 5px 0;
+        }
+        a {
+          text-decoration: none;
+          color: $white;
+          &:hover {
+            color: $secondary;
+            transition: $transition;
+          }
+        }
       }
       .contact-map {
         grid-area: map;
