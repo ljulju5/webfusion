@@ -95,9 +95,15 @@ header {
       font-size: 4em;
       letter-spacing: 7px;
       margin-bottom: 30px; }
+      @media (max-width: 1024px) {
+        header .content h1 {
+          font-size: 3rem; } }
     header .content p {
       text-align: center;
       font-size: 1.3em; }
+      @media (max-width: 1024px) {
+        header .content p {
+          font-size: 1.1rem; } }
 
 .btn {
   color: #fff;
@@ -564,19 +570,35 @@ Page About us
     flex-wrap: wrap;
     align-items: center; }
   .values article {
-    flex: 0 0 45%; }
+    flex: 0 0 45%;
+    margin-bottom: 40px; }
+    @media (max-width: 768px) {
+      .values article {
+        flex: 0 0 100%;
+        text-align: center; } }
     .values article h3 {
       font-size: 3rem;
       font-weight: 600;
       color: #ce1b28;
       text-shadow: 1px 1px 0px #f1f1f1; }
+      @media (max-width: 1024px) {
+        .values article h3 {
+          font-size: 2rem; } }
   .values .value {
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .values .value {
+        flex: 0 0 100%;
+        text-align: center; } }
     .values .value article {
       flex: 0 0 45%;
-      margin-bottom: 20px; }
+      margin-bottom: 30px; }
+      @media (max-width: 768px) {
+        .values .value article {
+          flex: 0 0 100%;
+          text-align: center; } }
       .values .value article i {
         font-size: 1.4rem;
         padding-bottom: 15px;
@@ -598,6 +620,7 @@ introduction
   padding: 80px 0; }
   .introduction .container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
@@ -608,7 +631,12 @@ introduction
       justify-content: space-between;
       align-items: flex-start;
       padding-right: 20px;
-      text-align: justify; }
+      text-align: justify;
+      margin-bottom: 30px; }
+      @media (max-width: 1024px) {
+        .introduction .container article:first-child {
+          flex: 0 0 100%;
+          align-items: center; } }
       .introduction .container article:first-child h2 {
         font-size: 2.2rem;
         color: #111111;
@@ -620,6 +648,11 @@ introduction
           height: 3px;
           background: #ce1b28;
           margin: 15px 0 30px 0; }
+        @media (max-width: 1024px) {
+          .introduction .container article:first-child h2 {
+            font-size: 1.8rem; }
+            .introduction .container article:first-child h2::after {
+              margin: 15px auto 30px auto; } }
       .introduction .container article:first-child .introText {
         display: flex;
         align-items: flex-start; }
@@ -639,13 +672,23 @@ introduction
           font-size: 1.1rem;
           color: #111111;
           line-height: 1.5; }
+          @media (max-width: 1024px) {
+            .introduction .container article:first-child .introText p {
+              font-size: 1rem; } }
       .introduction .container article:first-child p {
         font-size: 1.1rem;
         color: #111111;
         line-height: 1.5; }
+        @media (max-width: 1024px) {
+          .introduction .container article:first-child p {
+            font-size: 1rem; } }
     .introduction .container article:last-child {
       flex: 0 0 38%;
       border-radius: 30px; }
+      @media (max-width: 1024px) {
+        .introduction .container article:last-child {
+          flex: 0 0 100%;
+          align-items: center; } }
       .introduction .container article:last-child img {
         width: 100%;
         height: auto;
@@ -673,7 +716,8 @@ introduction
     margin-bottom: 60px;
     color: #fff; }
   .principles p {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    padding: 0 30px; }
 
 /**************
 blog

@@ -110,10 +110,16 @@ header {
       font-size: 4em;
       letter-spacing: 7px;
       margin-bottom: 30px;
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+      }
     }
     p {
       text-align: center;
       font-size: 1.3em;
+      @media (max-width: 1024px) {
+        font-size: 1.1rem;
+      }
     }
   }
 }
@@ -665,20 +671,36 @@ Page About us
   }
   article {
     flex: 0 0 45%;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: center;
+    } 
     h3 {
       font-size: 3rem;
       font-weight: 600;
       color: $primary;
-      text-shadow: 1px 1px 0px $lightGray;
+      text-shadow: 1px 1px 0px $lightGray; 
+      @media (max-width: 1024px) {
+        font-size: 2rem;
+      }
     }
   }
   .value {
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: center;
+    } 
     article {
       flex: 0 0 45%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+        text-align: center;
+      } 
       i {
         font-size: 1.4rem;
         padding-bottom: 15px;
@@ -706,6 +728,7 @@ introduction
   padding: $sectionPadding;
   .container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -717,8 +740,19 @@ introduction
       align-items: flex-start;
       padding-right: 20px;
       text-align: justify;
+      margin-bottom: 30px;
+      @media (max-width: 1024px) {
+        flex: 0 0 100%;
+        align-items: center;
+      }
       h2 {
         @include headingsAfter();
+        @media (max-width: 1024px) {
+          font-size: 1.8rem;
+          &::after {
+            margin: 15px auto 30px auto;    
+          }
+        }
       }
       .introText {
         display: flex;
@@ -741,6 +775,9 @@ introduction
           font-size: 1.1rem;
           color: $secondary;
           line-height: 1.5;
+          @media (max-width: 1024px) {
+            font-size: 1rem;
+          }
         }
       }
 
@@ -748,11 +785,18 @@ introduction
         font-size: 1.1rem;
         color: $secondary;
         line-height: 1.5;
+        @media (max-width: 1024px) {
+          font-size: 1rem;
+        }
       }
     }
     article:last-child {
       flex: 0 0 38%;
-      border-radius: 30px;
+      border-radius: 30px;      
+      @media (max-width: 1024px) {
+        flex: 0 0 100%;
+        align-items: center;
+      }
       img {
         width: 100%;
         height: auto;
@@ -783,6 +827,7 @@ introduction
   }
   p {
     font-size: 1.2rem;
+    padding: 0 30px;
   }
 }
 
