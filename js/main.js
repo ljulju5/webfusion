@@ -39,7 +39,12 @@ closeBtn.addEventListener("click", () => {
     content.style.display = "block";
   }
 });
+
+
+
 /* Counter */
+
+
 
 let firstCount = document.querySelector("#firstCount");
 let secondCount = document.querySelector("#secondCount");
@@ -120,3 +125,5 @@ card4.addEventListener("click", function () {
 card5.addEventListener("click", function () {
   card5.classList.toggle("is-flipped");
 });
+
+
