@@ -43,12 +43,10 @@ closeBtn.addEventListener("click", () => {
 //Technology Cards
 
 const cards = document.querySelectorAll("#card");
-const card1 = document.querySelector("#card-2");
 cards.forEach(card => {
-  const card2 = document.querySelector("#card-3");
   card.addEventListener("click", () => {
-    const card3 = document.querySelector("#card-4");
     card.classList.toggle("is-flipped");
-
   });
 });
+
+//test
