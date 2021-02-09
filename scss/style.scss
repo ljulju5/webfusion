@@ -12,6 +12,7 @@ Basic styles
 }
 body {
   font-family: Raleway, Arial, Helvetica, sans-serif;
+ 
 }
 .container {
   width: 75%;
@@ -78,14 +79,16 @@ header {
 	
   -moz-object-fit:fill;
     object-fit: cover;
-    transform: translateX(50%) translateY(50%);
-    bottom: 50%;
+    /*transform: translateX(50%) translateY(50%);*/
+    /*bottom: 50%;*/
     height: 100vh;
     min-width: 100%;
     min-height: 100%;
     position: absolute;
-    right: 50%;
-    width: 102%;
+	top:0;
+	left:0;
+   /* right: 50%;*/
+    width: 100%!important;
      overflow: hidden;
     &::before {
       content: "";
@@ -101,6 +104,7 @@ header {
       height: 100%;
       width: 100%;
       object-fit: fill;
+	 
     }
   }
   .img {
@@ -345,7 +349,7 @@ technologies
 				  font-size:1.7rem;
 			  }
 			  p {
-				  font-size: 0.9rem;
+				  font-size: 1rem;
 			  }
 			  @media(max-width:768px) {				  
 				  flex: 0 0 100%;			
@@ -422,27 +426,44 @@ technologies
     height:100%;		
 		.card_header {	
       position:relative;
-      padding: 30px;
-      background-image:linear-gradient(to bottom left, $white, $primary);
+      
+      background-image:linear-gradient(to bottom left, $orange, $primary);
       border-radius: 0 0 50% 0;
       color:$light;
       font-weight:600;	
-    .card_header h2 {
+	  padding:20px;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+         h2 {
       color:$light;
-      font-size:32px;
+      font-size:1.2rem;
       font-weight:900;
       text-transform:uppercase;
-      text-align:center;	
+      text-align:center;
+	  margin:auto;
+	  padding: 20px;
+	
       }		
     }			
 			.card_body {
 				padding: 20px;
 				background:$white;	
 				h2 {
-					padding: 10px 0;
+					padding: 7px 0;
 				}				
 				p {
 					text-align:left;
+					font-size:0.8rem;
+					
+					@media(max-width:1024px) {			  
+			  
+				  font-size: 0.9rem;
+		
+			 
+		  }
+					
+					
         }			
         @media(max-width:768px) {					
 					display:flex;
@@ -959,7 +980,8 @@ blog
 			
 			@media(max-width:768px) {
 				
-				flex: 0 0 60%;
+				flex: 0 0 100%;
+				
 			}
 			
 			
@@ -1035,7 +1057,9 @@ blog
 		
 	@media(max-width:768px ) {
 			
-			flex: 0 0 20%;
+			flex: 0 0 100%;
+		    display:flex;
+			justify-content:space-between;
 		}
       .widget {
         margin-bottom: 30px;
@@ -1045,6 +1069,8 @@ blog
 		 @media(max-width:768px ) {
 			
 			padding:10px;
+			 flex: 0 0 48%;
+			
 		} 
 
         h3 {
@@ -1180,15 +1206,44 @@ PRODUCTS & SERVICES
                     flex: 0 0 40%;
                   }
                 h3 {  
-				  font-size:1.1rem;
+				  font-size:1rem;
                   text-transform:uppercase;
+					@media(max-width:600px) {
+							font-size: 0.9rem;
+							
+						}
                 
                 }
                 p {
                   font-size: 1rem;
                   padding: 20px 0;
                   line-height: 1.4;
+					
+					@media(max-width:768px) {
+						
+						
+						padding: 15px 0;
+						
+						@media(max-width:600px) {
+							font-size: 0.8rem;
+							padding: 10px 0;
+						}
+					}
                 }
+				  
+				  a {
+					  
+					  	@media(max-width:600px) {
+							 padding: 5px 10px;
+					  font-size:0.9rem;
+							
+							
+						}
+					  
+					  
+					  
+					
+				  }
 				  
 				  /*
                 button {              
